@@ -34,11 +34,17 @@ Installing extensions...
 
 By the time you see the last line above, the server is pretty much up. There may very well be some additional output after that line - that is fine. Unless of course you observe an error in the output - that may be a problem.
 
-## Getting a terminal
+## Getting a terminal in the running Docker container
 
 ```shell
 docker exec -it codeserve bash
 ```
+
+## Getting a terminal in VSCode
+
+Press `CTRL`+`P` and then type `Terminal: Create New Integrated Terminal`
+
+The first time, `zsh` will ask you to choose a option. Select either `1` or `2`. More info on [`zsh` can be found here...](https://www.zsh.org/)
 
 ## Installed Code Extensions
 
@@ -61,3 +67,5 @@ ugross.vscode-react-snippets
 
 * Customize the installed packages at build time
 * Customize the Extensions and build time
+* Custom `zsh` config
+* Install [Oh My ZSH](https://ohmyz.sh/)
