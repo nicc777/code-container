@@ -35,7 +35,7 @@ RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .
 RUN chmod 700 *
-#USER code
+LABEL version="3.9.1"
 
 CMD ["/opt/bin/code-service-starter.sh"]
 
