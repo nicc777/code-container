@@ -23,9 +23,11 @@ FROM code-node AS code-service
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN chown code /usr/bin/code-server
 RUN mkdir -p /data
-RUN chmod 777 /data
+RUN chown -R code /data
 VOLUME [ "/data" ]
 EXPOSE 8081
+EXPOSE 3000
+EXPOSE 5000
 
 
 FROM code-service
