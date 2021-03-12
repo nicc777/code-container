@@ -4,7 +4,7 @@ Docker container based on Debian hosting https://github.com/cdr/code-server
 
 ## Important Security Information
 
-This project essentially packages a release from [another repository](https://github.com/cdr/code-server) for convenience. Please check the latest version in that repository and compare that with teh version being built for this image. If you are not comfortable with any discrepancies, please do not use this image.
+This project essentially packages a release from [another repository](https://github.com/cdr/code-server) for convenience. Please check the latest version in that repository and compare that with the version being built for this image. If you are not comfortable with any discrepancies, please do not use this image.
 
 This solution assumes a private running environment and all authentication to the VSCode web interface have been disabled.
 
@@ -76,13 +76,13 @@ Examples of this include the creation of Python virtual environments or installi
 
 You may need a terminal in the running container to achieve these goals - refer to the sections below for getting access to a terminal.
 
-## Getting a terminal in the running Docker container
+## Getting a terminal in the running Docker container (root user)
 
 ```shell
 docker exec -it codeserve bash
 ```
 
-## Getting a terminal in VSCode
+## Getting a terminal in VSCode (code user)
 
 Press `CTRL`+`P` and then type `Terminal: Create New Integrated Terminal`
 
@@ -107,7 +107,7 @@ ugross.vscode-react-snippets
 
 ## Feature Backlog
 
-* Customize the installed packages at build time
-* Customize the Extensions and build time
-* Custom `zsh` config
+* Customize the installed packages at first run
+* Customize the Extensions at first run
+* Custom `zsh` config options
 * Install [Oh My ZSH](https://ohmyz.sh/)
