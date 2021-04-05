@@ -4,11 +4,14 @@ RUN apt-get update
 RUN apt-get install -y libterm-readline-gnu-perl
 RUN apt-get install -y apt-utils
 RUN apt-get upgrade -y
-RUN apt-get install -y python3 python3-virtualenv openssh-client curl wget procps git python3-boto3 awscli zsh zsh-syntax-highlighting
+RUN apt-get install -y python3 python3-virtualenv openssh-client curl wget procps git python3-boto3 awscli zsh zsh-syntax-highlighting vim sudo
 RUN mkdir -p /code-user/projects
 RUN useradd -c "Code User" -d /code-user -s /usr/bin/zsh code
 RUN chown -R code /code-user
 RUN chmod 700 /code-user
+COPY sudoers /etc/sudoers
+RUN chown root.root /etc/sudoers
+RUN chmod 440 /etc/sudoers
 VOLUME [ "/code-user/projects" ]
 
 
