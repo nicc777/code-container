@@ -2,6 +2,12 @@
 
 Docker container based on Debian hosting https://github.com/cdr/code-server
 
+__Latest Updates (2021-04-05)__
+
+* Added `sudo` to allow the `code` user to run `apt-get` and `apt-cache` commands
+* Added `neofetch` because that's seems the new thing to do :-)
+* Installed [oh-my-zsh](https://ohmyz.sh/) for the `code` user
+
 ## Important Security Information
 
 This project essentially packages a release from [another repository](https://github.com/cdr/code-server) for convenience. Please check the latest version in that repository and compare that with the version being built for this image. If you are not comfortable with any discrepancies, please do not use this image.
@@ -109,5 +115,3 @@ ugross.vscode-react-snippets
 
 * Customize the installed packages at first run
 * Customize the Extensions at first run
-* Custom `zsh` config options
-* Install [Oh My ZSH](https://ohmyz.sh/)
