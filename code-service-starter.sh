@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Starting the code-server"
-cd /code-server/projects
+cd /code-user/projects
 su -c "code-server --user-data-dir=/data --install-extension Gruntfuggly.todo-tree"
 su -c "code-server --user-data-dir=/data --install-extension mhutchie.git-graph"
 su -c "code-server --user-data-dir=/data --install-extension ms-python.python"
