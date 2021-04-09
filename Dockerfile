@@ -27,7 +27,7 @@ RUN apt-get install -y nodejs
 
 # References: https://github.com/cdr/code-server/blob/main/docs/guide.md
 FROM code-node AS code-service
-RUN curl -fsSL https://code-server.dev/install.sh  | sh
+RUN curl -fsSL https://code-server.dev/install.sh  | sh 
 RUN chown code /usr/bin/code-server
 RUN mkdir -p /data
 RUN chown -R code /data
@@ -38,7 +38,7 @@ EXPOSE 5000
 
 
 FROM code-service
-LABEL version="3.9.2"
+LABEL version="3.9.3"
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .
