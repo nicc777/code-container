@@ -2,7 +2,11 @@
 
 Docker container based on Debian hosting https://github.com/cdr/code-server
 
-__Latest Updates (2021-04-05)__
+__Updates (2021-05-15)__
+
+* Bumped version to [code-server v3.10.0](https://github.com/cdr/code-server/releases/tag/v3.10.0)
+
+__Updates (2021-04-05)__
 
 * Added `sudo` to allow the `code` user to run `apt-get` and `apt-cache` commands
 * Added `neofetch` because that's seems the new thing to do :-)
