@@ -2,6 +2,10 @@
 
 Docker container based on Debian hosting https://github.com/cdr/code-server
 
+__Updates (2021-05-18)__
+
+* Bumped version to [code-server v3.10.1](https://github.com/cdr/code-server/releases/tag/v3.10.1)
+
 __Updates (2021-05-15)__
 
 * Bumped version to [code-server v3.10.0](https://github.com/cdr/code-server/releases/tag/v3.10.0)
