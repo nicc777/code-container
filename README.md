@@ -1,6 +1,10 @@
 # code-container
 
-Docker container based on Debian hosting https://github.com/cdr/code-server
+![screenshot](screenshot.png)
+
+The screenshot above shows a simple example from an Apple iPad Air 4 (2020) connected to the IDE on a LAN network.
+
+The Docker container is based on a Debian container that hosts the project https://github.com/cdr/code-server
 
 The latest updates (showing the last three months in which updates were done):
 
