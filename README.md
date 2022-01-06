@@ -4,6 +4,10 @@ Docker container based on Debian hosting https://github.com/cdr/code-server
 
 The latest updates (showing the last three months in which updates were done):
 
+__Updates for January 2022__
+
+* Bumped version to [code-server v4.0.1](https://github.com/coder/code-server/releases/tag/v4.0.1) (2022-01-06)
+
 __Updates for August 2021__
 
 * Bumped version to [code-server v3.11.1](https://github.com/cdr/code-server/releases/tag/v3.11.1) (2021-08-08)
@@ -11,12 +15,6 @@ __Updates for August 2021__
 __Updates for July 2021__
 
 * Bumped version to [code-server v3.11.0](https://github.com/cdr/code-server/releases/tag/v3.11.0) (2021-07-16)
-
-__Updates for May 2021__
-
-* Bumped version to [code-server v3.10.2](https://github.com/cdr/code-server/releases/tag/v3.10.2) (2021-05-22)
-* Bumped version to [code-server v3.10.1](https://github.com/cdr/code-server/releases/tag/v3.10.1) (2021-05-18)
-* Bumped version to [code-server v3.10.0](https://github.com/cdr/code-server/releases/tag/v3.10.0) (2021-05-15)
 
 ## Important Security Information
 
@@ -40,6 +38,12 @@ If you cloned this repository from GitHub, you can build the image with the foll
 
 ```shell
 docker build -t code-container .
+```
+
+To force a completely fresh build, try running:
+
+```shell
+docker build --no-cache -t code-container .
 ```
 
 ## Running the Container
@@ -125,3 +129,5 @@ ugross.vscode-react-snippets
 
 * Customize the installed packages at first run
 * Customize the Extensions at first run
+* Workflow for updating [oh-my-zsh](https://ohmyz.sh/)
+* Workflow for latest Node "stable" distribution

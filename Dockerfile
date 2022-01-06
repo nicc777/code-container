@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS code-base
+FROM debian:bullseye-slim AS code-base
 
 RUN apt-get update
 RUN apt-get install -y libterm-readline-gnu-perl
@@ -38,7 +38,7 @@ EXPOSE 5000
 
 
 FROM code-service
-LABEL version="3.11.1"
+LABEL version="4.0.1"
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .
