@@ -1,5 +1,8 @@
 # code-container
 
+![screenshot](screenshot.png)
+<a href="https://github.com/nicc777/kubernetes-from-scratch/raw/main/chapter_05/tmux_session.png" target="_blank"><img src="https://github.com/nicc777/kubernetes-from-scratch/raw/main/chapter_05/tmux_session.png" height="454" width="844" /></a>
+
 Docker container based on Debian hosting https://github.com/cdr/code-server
 
 The latest updates (showing the last three months in which updates were done):
