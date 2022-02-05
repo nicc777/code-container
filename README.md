@@ -8,6 +8,11 @@ The Docker container is based on a Debian container that hosts the project https
 
 The latest updates (showing the last three months in which updates were done):
 
+__Updates for February 2022__
+
+* Bumped version to [code-server v4.0.1](https://github.com/coder/code-server/releases/tag/v4.0.2) (2022-02-05)
+* NodeJS was bumped to version 17
+
 __Updates for January 2022__
 
 * Bumped version to [code-server v4.0.1](https://github.com/coder/code-server/releases/tag/v4.0.1) (2022-01-06)
@@ -15,10 +20,6 @@ __Updates for January 2022__
 __Updates for August 2021__
 
 * Bumped version to [code-server v3.11.1](https://github.com/cdr/code-server/releases/tag/v3.11.1) (2021-08-08)
-
-__Updates for July 2021__
-
-* Bumped version to [code-server v3.11.0](https://github.com/cdr/code-server/releases/tag/v3.11.0) (2021-07-16)
 
 ## Important Security Information
 

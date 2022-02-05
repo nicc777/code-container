@@ -21,7 +21,7 @@ VOLUME [ "/code-user/projects" ]
 
 # References: https://linuxize.com/post/how-to-install-node-js-on-debian-10/ and https://github.com/nodesource/distributions
 FROM code-base AS code-node
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_17.x | bash -
 RUN apt-get install -y nodejs
 
 
@@ -38,7 +38,7 @@ EXPOSE 5000
 
 
 FROM code-service
-LABEL version="4.0.1"
+LABEL version="4.0.2"
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .
