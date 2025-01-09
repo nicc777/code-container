@@ -8,19 +8,18 @@ The Docker container is based on a Debian container that hosts the project https
 
 The latest updates (showing the last three months in which updates were done):
 
+
+__Updates for January 2025__
+
+* Bumped version to [code-server v4.96.2](https://github.com/coder/code-server/releases/tag/v4.96.2)
+* NodeJS was bumped to version 18
+* Updated examples from using `docker` to `podman`
+* Adapted the Dockerfile to reference base image from docker hub using a full URL compatible with `podman`
+
 __Updates for April 2022__
 
 * Bumped version to [code-server v4.3.0](https://github.com/coder/code-server/releases/tag/v4.3.0) (2022-04-15)
 * NodeJS was bumped to version 17.9.0
-
-__Updates for February 2022__
-
-* Bumped version to [code-server v4.0.1](https://github.com/coder/code-server/releases/tag/v4.0.2) (2022-02-05)
-* NodeJS was bumped to version 17
-
-__Updates for January 2022__
-
-* Bumped version to [code-server v4.0.1](https://github.com/coder/code-server/releases/tag/v4.0.1) (2022-01-06)
 
 
 ## Important Security Information
@@ -44,13 +43,13 @@ My repositories are scanned by [Snyk](https://snyk.io/) and I will attempt to gi
 If you cloned this repository from GitHub, you can build the image with the following command:
 
 ```shell
-docker build -t code-container .
+podman build -t code-container .
 ```
 
 To force a completely fresh build, try running:
 
 ```shell
-docker build --no-cache -t code-container .
+podman build --no-cache -t code-container .
 ```
 
 ## Running the Container
@@ -63,29 +62,19 @@ Below is an example of creating a directory where all your projects will live. E
 mkdir -p $HOME/tmp/test-projects
 ```
 
-### Running from Docker Hub:
-
-```shell
-docker pull nicc777/code-container
-docker run --name codeserve -d -p 127.0.0.1:8081:8081 -v $HOME/tmp/test-projects:/code-user/projects nicc777/code-container
-```
-
 ### Running a Custom Built Image:
 
 ```shell
-docker run --name codeserve -d -p 127.0.0.1:8081:8081 -v $HOME/tmp/test-projects:/code-user/projects code-container
+podman run --name codeserve -d -p 127.0.0.1:8081:8081 -v $HOME/tmp/test-projects:/code-user/projects localhost/code-container:latest
 ```
 
-The extensions first need to be installed, which can take a minute or so. You can check when the server is ready by tailing the logs:
+The extensions first need to be installed, which can take a minute or so. You can check when the server is ready by tailing the logs with `podman logs -f codeserve`:
 
-```shell
-docker logs -f codeserve
+```text
 Starting the code-server
-/opt/bin/code-service-starter.sh: 4: cd: can't cd to /code-server/projects
-[2021-03-12T06:42:28.397Z] info  Wrote default config file to ~/.config/code-server/config.yaml
-Installing extensions...
-Installing extension 'gruntfuggly.todo-tree' v0.0.202...
-Extension 'gruntfuggly.todo-tree' v0.0.202 was successfully installed.
+  .
+  .
+  .
 Installing extensions...
   .
   .
@@ -106,7 +95,7 @@ You may need a terminal in the running container to achieve these goals - refer 
 ## Getting a terminal in the running Docker container (root user)
 
 ```shell
-docker exec -it codeserve bash
+podman exec -it codeserve bash
 ```
 
 ## Getting a terminal in VSCode (code user)
