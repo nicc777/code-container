@@ -9,17 +9,17 @@ The Docker container is based on a Debian container that hosts the project https
 The latest updates (showing the last three months in which updates were done):
 
 
+__Updates for February 2025__
+
+* Bumped version to [code-server v4.96.4](https://github.com/coder/code-server/releases/tag/v4.96.4)
+* NodeJS was bumped to version 22
+
 __Updates for January 2025__
 
 * Bumped version to [code-server v4.96.2](https://github.com/coder/code-server/releases/tag/v4.96.2)
 * NodeJS was bumped to version 18
 * Updated examples from using `docker` to `podman`
 * Adapted the Dockerfile to reference base image from docker hub using a full URL compatible with `podman`
-
-__Updates for April 2022__
-
-* Bumped version to [code-server v4.3.0](https://github.com/coder/code-server/releases/tag/v4.3.0) (2022-04-15)
-* NodeJS was bumped to version 17.9.0
 
 
 ## Important Security Information
@@ -28,7 +28,9 @@ This project essentially packages a release from [another repository](https://gi
 
 This solution assumes a private running environment and all authentication to the VSCode web interface have been disabled.
 
-**_Important_**: Do not expose the running container directly to the Internet. This solution was intended for a PRIVATE and trusted networked environment.
+
+> [!IMPORTANT]
+> Do not expose the running container directly to the Internet. This solution was intended for a PRIVATE and trusted networked environment.
 
 HTTPS is not enabled. All network traffic is in the clear.
 
