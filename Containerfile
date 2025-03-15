@@ -38,7 +38,7 @@ EXPOSE 5000
 
 
 FROM code-service
-LABEL version="4.96.4"
+LABEL version="4.98.2"
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .

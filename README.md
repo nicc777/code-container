@@ -8,6 +8,10 @@ The Docker container is based on a Debian container that hosts the project https
 
 The latest updates (showing the last three months in which updates were done):
 
+__Updates for March 2025__
+
+* Bumped version to [code-server v4.98.2](https://github.com/coder/code-server/releases/tag/v4.98.2)
+* Renamed `Dockerfile` to `Containerfile` to become more vendor neutral
 
 __Updates for February 2025__
 
