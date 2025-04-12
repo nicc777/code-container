@@ -8,6 +8,11 @@ The Docker container is based on a Debian container that hosts the project https
 
 The latest updates (showing the last three months in which updates were done):
 
+__Updates for April 2025__
+
+* Bumped version to [code-server v4.98.2](https://github.com/coder/code-server/releases/tag/v4.99.2)
+
+
 __Updates for March 2025__
 
 * Bumped version to [code-server v4.98.2](https://github.com/coder/code-server/releases/tag/v4.98.2)
@@ -17,13 +22,6 @@ __Updates for February 2025__
 
 * Bumped version to [code-server v4.96.4](https://github.com/coder/code-server/releases/tag/v4.96.4)
 * NodeJS was bumped to version 22
-
-__Updates for January 2025__
-
-* Bumped version to [code-server v4.96.2](https://github.com/coder/code-server/releases/tag/v4.96.2)
-* NodeJS was bumped to version 18
-* Updated examples from using `docker` to `podman`
-* Adapted the Dockerfile to reference base image from docker hub using a full URL compatible with `podman`
 
 
 ## Important Security Information
