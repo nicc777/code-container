@@ -43,7 +43,9 @@ jobs:
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           # generate Docker tags based on the following events/attributes
           tags: |
-            type=semver,pattern={{raw}}
+            ${{ env.GITHUB_REF }}
+          labels: |
+            ${{ env.GITHUB_REF }}
 
       - name: Checkout repository
         uses: actions/checkout@v4
