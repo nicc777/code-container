@@ -38,7 +38,10 @@ EXPOSE 5000
 
 
 FROM code-service
-LABEL version="4.99.2"
+
+ARG RELEASE_TAG
+LABEL release.tag=$RELEASE_TAG
+# LABEL version="4.99.2"
 RUN mkdir -p /opt/bin
 WORKDIR /opt/bin
 COPY code-service-starter.sh .
